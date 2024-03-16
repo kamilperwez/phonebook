@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "6f8a1390-5ac4-4d9b-aefa-8a2f29ea2986",
+		"name": "Phonebook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33638660"
+	},
+	"item": [
+		{
+			"name": "UserController",
+			"item": [
+				{
+					"name": "user/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/user/10001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"user",
+								"10001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test\",\r\n    \"surname\": \"test\",\r\n    \"middlename\": \"\",\r\n    \"login\": \"test\",\r\n    \"password\": \"testm\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/user/registration",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"user",
+								"registration"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HomeController",
+			"item": [
+				{
+					"name": "home/{userId}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/home/10001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"home",
+								"10001"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ContactController",
+			"item": [
+				{
+					"name": "contact/add-contact",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"tabish\",\r\n    \"surname\": \"ansari\",\r\n    \"middlename\": \"\",\r\n    \"homephone\": \"\",\r\n    \"mobilephone\": \"6121685289\",\r\n    \"workphone\": \"\",\r\n    \"address\": \"adfdfs\",\r\n    \"userId\": 10001\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/contact/add-contact",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"contact",
+								"add-contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contact/delete/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/contact/delete/1000000003",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"contact",
+								"delete",
+								"1000000003"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contact/edit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contactId\": 1000000004,\r\n    \"name\": \"tabishnew\",\r\n    \"surname\": \"ansari\",\r\n    \"middlename\": \"\",\r\n    \"homephone\": \"\",\r\n    \"mobilephone\": \"6121685289\",\r\n    \"workphone\": \"\",\r\n    \"address\": \"adfdfs\",\r\n    \"userId\": 10001\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/contact/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"contact",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
